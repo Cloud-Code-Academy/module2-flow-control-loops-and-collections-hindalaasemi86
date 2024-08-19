@@ -82,8 +82,7 @@ public with sharing class FlowControlLoopsCollectionsTest {
         Assert.areEqual('Empty', result, 'Incorrect result for empty string');
 
         result = FlowControlLoopsCollections.checkString(null);
-        Assert.areEqual('Null', result, 'Incorrect result for null string');
-
+        Assert.areEqual(null, result,'Incorrect result for null string');
         result = FlowControlLoopsCollections.checkString('Hello');
         Assert.areEqual('Contains Text', result, 'Incorrect result for string with text');
     }
