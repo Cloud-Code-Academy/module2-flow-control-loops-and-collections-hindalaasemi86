@@ -14,7 +14,7 @@
 * in flow control, loops, and collections. By mastering these concepts, developers will be able to write more
 * efficient and effective code in their Salesforce projects.
 *
-* @author Hind Alaasemi
+* @author Hind Alaasemi ***
 */
 public with sharing class FlowControlLoopsCollections {
     
@@ -102,7 +102,7 @@ public with sharing class FlowControlLoopsCollections {
             if (a<0) {
                 string result = 'Negative';
                 return result;
-            }else {if (a==0) {
+            }else { if (a==0) {
                 String result = 'Zero';
                 return result; 
             }else {
@@ -122,18 +122,20 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        integer b=math.mod(a, 2);
-        if(a==Null){
+        // Check if the number is null
+        if (a== Null) {
             return null;
         }else {
-            if (b == 0) {
-                return 'Even'; 
-             }else {
-                 return 'Odd';
+            integer b = math.mod(a, 2);
+            // Check if the number is even
+            if(b == 0){
+                return 'Even';
+            }else {
+                // The number is odd
+                    return 'Odd'; 
+        }
              }
         }
-    }
-
     /**
      * Question 6
      * Checks if a string is empty, null, or contains text.
